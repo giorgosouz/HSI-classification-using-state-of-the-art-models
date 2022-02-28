@@ -139,8 +139,8 @@ MODEL='hamida'
 DATASET='train2'
 vDATASET='test2'
 MODE='disjoint'
-klepsia=True    
-if klepsia==False:
+ttest=True    
+if ttest==False:
     SAMPLE_PERCENTAGE=0.2
 else:
     SAMPLE_PERCENTAGE=1
@@ -225,7 +225,7 @@ train_loader = data.DataLoader(train_dataset,
                                        shuffle=True)
 
 
-if klepsia==True:
+if ttest==True:
     del img
     
     vimg, vgt, vLABEL_VALUES, vIGNORED_LABELS, vRGB_BANDS, vpalette = get_dataset(vDATASET,
